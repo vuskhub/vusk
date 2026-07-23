@@ -52,7 +52,7 @@ local MuscleTab = Window:CreateTab("Muscle Legends", "dumbbell")
 -- ABA PRINCIPAL
 ----------------------------------------------------
 
-MainTab:CreateLabel("Vusk HUB v1.0")
+MainTab:CreateLabel("Vusk HUB v1.1")
 MainTab:CreateLabel("Developed by VuskScripts")
 MainTab:CreateDivider()
 MainTab:CreateLabel("📍 Supported Games")
@@ -69,25 +69,6 @@ SettingsTab:CreateButton({
     Name = "🗑 Destroy Hub",
     Callback = function()
         Rayfield:Destroy()
-    end
-})
-
--- Reload Hub
-SettingsTab:CreateButton({
-    Name = "🔄 Reload Hub",
-    Callback = function()
-        Rayfield:Destroy()
-        task.wait(0.3)
-        
-        local success, err = pcall(function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/vuskhub/vusk/91bfaa96786211704219167f8fb4a1970225d398/VuskHUBfree.lua"))()
-        end)
-        
-        if success then
-            print("✅ Vusk HUB Reloaded successfully!")
-        else
-            warn("❌ Reload error: " .. tostring(err))
-        end
     end
 })
 
