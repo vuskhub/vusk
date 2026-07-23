@@ -80,7 +80,7 @@ SettingsTab:CreateButton({
         task.wait(0.3)
         
         local success, err = pcall(function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/vuskhub/vusk/a2ddc19ebd8d2cb6bb7e66954917fb8757764284/README.md"))()
+            loadstring(game:HttpGet("https://github.com/vuskhub/vusk/blob/91bfaa96786211704219167f8fb4a1970225d398/VuskHUBfree.lua"))()
         end)
         
         if success then
